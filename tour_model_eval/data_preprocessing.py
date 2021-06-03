@@ -39,7 +39,7 @@ def extract_features(filter_trips):
 
 def split_data(filter_trips):
     X = extract_features(filter_trips)
-    kf = KFold(n_splits=5, shuffle=True, random_state=3)
+    kf = KFold(n_splits=5, shuffle=True, random_state=9)
     train_idx = []
     test_idx = []
     for train_index, test_index in kf.split(X):
